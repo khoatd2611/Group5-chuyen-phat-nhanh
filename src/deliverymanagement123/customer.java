@@ -226,7 +226,7 @@ public class customer extends javax.swing.JPanel {
 //           s.executeUpdate("INSERT INTO customer(sender_name,) VALUES ('"+name+"','"+tp+"')");
 //        } catch (Exception e) {
 //            System.out.println(e);
-//        }
+//        };
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
