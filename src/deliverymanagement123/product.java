@@ -51,9 +51,9 @@ public class product extends javax.swing.JPanel {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setText("Enter Name");
 
-        jTextField2.setText("jTextField2");
+        jTextField2.setText("Enter Bar Code");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Save");
@@ -83,12 +83,12 @@ public class product extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Bar Code :");
 
-        jTextField4.setText("jTextField2");
+        jTextField4.setText("Enter Price");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Price :");
 
-        jTextField5.setText("jTextField2");
+        jTextField5.setText("Enter Sender ID");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Sender ID");
@@ -96,7 +96,7 @@ public class product extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Qty :");
 
-        jTextField6.setText("jTextField2");
+        jTextField6.setText("Enter Qty");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -180,7 +180,7 @@ public class product extends javax.swing.JPanel {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField3.setText("jTextField3");
+        jTextField3.setText("Enter ID");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
