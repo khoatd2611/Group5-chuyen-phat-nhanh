@@ -4,7 +4,8 @@
  */
 package deliverymanagement123;
 
-import com.mysql.jdbc.Statement;
+//import com.mysql.jdbc.Statement;
+import java.sql.Statement;
 
 /**
  *
