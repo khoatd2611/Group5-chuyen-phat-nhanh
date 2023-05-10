@@ -9,5 +9,7 @@ package deliverymanagement123;
  * @author ADMIN
  */
 public class nghia {
-    
+    public static void main(String[] args) {
+        System.out.println("linh tinh");
+    }
 }
