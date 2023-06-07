@@ -5,6 +5,7 @@
 package user;
 
 import dao.UserDao;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 
 /**
@@ -54,6 +55,8 @@ public class UserAccount extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -82,6 +85,12 @@ public class UserAccount extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 218, 293, -1));
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 357, 293, -1));
 
         jTextField6.setEditable(false);
@@ -104,6 +113,11 @@ public class UserAccount extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Delete");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 335, 140, 44));
 
         jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
@@ -159,6 +173,22 @@ public class UserAccount extends javax.swing.JFrame {
         jPasswordField1.setText("jPasswordField1");
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 290, -1));
 
+        jLabel9.setText("show");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
+
+        jLabel10.setText("hide");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -174,6 +204,7 @@ public class UserAccount extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     private void init() {
+        setLocation(140,310); //day la cai gi vay
         uId = user.getUserId(UserDashboard.userEmail.getText());
         value = user.getUserValue(uId);
         setValue();
@@ -189,12 +220,73 @@ public class UserAccount extends javax.swing.JFrame {
         jTextField7.setText(value[6]);
         jTextField8.setText(value[7]);
     }
+
+    public boolean isEmpty() {
+        if (jTextField2.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "User is required", "Warning", 2);
+            return false;
+        }
+        if (jTextField4.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Email is required", "Warning", 2);
+            return false;
+        }
+        if (!jTextField4.getText().matches("^.+@.+\\..+$")) {
+            JOptionPane.showMessageDialog(this, "Invalid email address", "Warning", 2);
+            return false;
+        }
+        if (String.valueOf(jPasswordField1.getPassword()).isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Password is required", "Warning", 2);
+            return false;
+        }
+        if (jTextField5.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Phone is required", "Warning", 2);
+            return false;
+        }
+        if (jTextField5.getText().length() < 10) {
+            JOptionPane.showMessageDialog(this, "Phone is too short", "Warning", 2);
+            return false;
+        }
+        if (jTextField5.getText().length() > 10) {
+            JOptionPane.showMessageDialog(this, "Phone is too long", "Warning", 2);
+            return false;
+        }
+        if (jTextField8.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Security answer is required", "Warning", 2);
+            return false;
+        }
+        if (jTextField6.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Address is required", "Warning", 2);
+            return false;
+        }
+        if (jComboBox1.getSelectedIndex() == -1) {
+            JOptionPane.showMessageDialog(this, "Address is required", "Warning", 2);
+            return false;
+        }
+        return true;
+    }
+
+
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        if (isEmpty()) {
+            if (!check()) {
+                String id = jTextField1.getText();
+                String username = jTextField2.getText();
+                String email = jTextField3.getText();
+                String password = String.valueOf(jPasswordField1.getPassword());
+                String phone = jTextField5.getText();
+                String seq = jTextField6.getText();
+                String ans = jTextField7.getText();
+                String address = jTextField8.getText();
+                
+                user.update(id, username, email, ans, phone, seq, ans, address);
+                this.dispose();
+                setDefault();
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -209,6 +301,57 @@ public class UserAccount extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jLabel14MouseClicked
 
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        jPasswordField1.setEchoChar('*');
+        jLabel9.setVisible(true);
+        jLabel10.setVisible(false);
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        user.delete(uId);
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private boolean check() {
+        String newEmail = jTextField3.getText();
+        String newPhone = jTextField5.getText();
+        if (newEmail.equals(value[2]) && newPhone.equals(value[4])) {
+            return false;
+        } else {
+            if (!newEmail.equals(value[2])) {
+                boolean x = user.isEmailExist(newEmail);
+                if (x) {
+                    jOptionPane.showMessageDialog(this, "This email already exists", "Warning", 2);
+                }
+                return x;
+            }
+            if (!newEmail.equals(value[4])) {
+                boolean x = user.isPhoneExist(newPhone);
+                if (x) {
+                    jOptionPane.showMessageDialog(this, "This phone number already exists", "Warning", 2);
+                }
+                return x;
+            }
+        }
+        return false;
+    }
+
+    private void setDefault () {
+        UserDashboard.jPanel7.setBackground(primaryColor);
+        UserDashboard.jPanel8.setBackground(primaryColor);
+        UserDashboard.jPanel9.setForeground(textPrimaryColor);
+        UserDashboard.jLabel10.setVisible(true);
+        UserDashboard.jLabel10.setVisible(false);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -248,6 +391,7 @@ public class UserAccount extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     public static javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -256,6 +400,7 @@ public class UserAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;

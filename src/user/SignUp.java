@@ -300,12 +300,12 @@ public class SignUp extends javax.swing.JFrame {
         jTextField1.setBackground(notEdit);
         jTextField1.setText(String.valueOf(user.getMaxRow()));
     }
- public boolean isEmpty(){
-     if(jTextField2.getText().isEmpty()){
-         JOptionPane.showMessageDialog(this, "User is required","Warning",2);
-         return false;
-     }
-      if (jTextField4.getText().isEmpty()) {
+    public boolean isEmpty() {
+        if (jTextField2.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "User is required", "Warning", 2);
+            return false;
+        }
+        if (jTextField4.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Email is required", "Warning", 2);
             return false;
         }
@@ -321,15 +321,15 @@ public class SignUp extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Phone is required", "Warning", 2);
             return false;
         }
-        if (jTextField5.getText().length()<10) {
+        if (jTextField5.getText().length() < 10) {
             JOptionPane.showMessageDialog(this, "Phone is too short", "Warning", 2);
             return false;
         }
-        if (jTextField5.getText().length()>10) {
+        if (jTextField5.getText().length() > 10) {
             JOptionPane.showMessageDialog(this, "Phone is too long", "Warning", 2);
             return false;
         }
-         if (jTextField8.getText().isEmpty()) {
+        if (jTextField8.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Security answer is required", "Warning", 2);
             return false;
         }
@@ -337,12 +337,12 @@ public class SignUp extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Address is required", "Warning", 2);
             return false;
         }
-        if (jComboBox1.getSelectedIndex()==-1) {
+        if (jComboBox1.getSelectedIndex() == -1) {
             JOptionPane.showMessageDialog(this, "Address is required", "Warning", 2);
             return false;
         }
- return true;
- }
+        return true;
+    }
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed

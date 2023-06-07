@@ -89,6 +89,29 @@ public class UserDao {
         }
     }
 
+    //update user data
+    public void update(String id, String username, String email, String pass, String phone, String seq, String ans, String address) {
+        String sql = "update user set uname = ?, uemail = ?, upassword = ?, uphone = ?, usecqus = ?, uans = ?, uaddress = ? where uid = ?";
+
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, username);
+            ps.setString(2, email);
+            ps.setString(3, pass);
+            ps.setString(4, phone);
+            ps.setString(5, seq);
+            ps.setString(6, ans);
+            ps.setString(7, address);
+            if (ps.executeUpdate() > 0) {
+
+                JOptionPane.showMessageDialog(null, "User data successfully updated ");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ForgotPasswordDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
     // get user value
     public String[] getUserValue(int id) {
         String[] value = new String[6];
@@ -112,7 +135,7 @@ public class UserDao {
         }
         return value;
     }
-    
+
     //get user id
     public int getUserId(String email) {
         int id = 0;
@@ -121,7 +144,7 @@ public class UserDao {
             ps.setString(1, email);
             rs = ps.executeQuery();
             if (rs.next()) {
-                id =rs.getInt(1);
+                id = rs.getInt(1);
             }
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
