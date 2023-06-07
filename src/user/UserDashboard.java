@@ -97,7 +97,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel19.setText("AZ COURIER SERVICE");
 
         userEmail.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
-        userEmail.setText("user@gmail.com");
+        userEmail.setText("userEmail");
 
         jLabel20.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
         jLabel20.setText("Log out");

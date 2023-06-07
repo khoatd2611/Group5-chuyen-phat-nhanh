@@ -4,6 +4,9 @@
  */
 package user;
 
+import dao.UserDao;
+import javax.swing.JPasswordField;
+
 /**
  *
  * @author tuan1
@@ -13,8 +16,13 @@ public class UserAccount extends javax.swing.JFrame {
     /**
      * Creates new form UserAccount
      */
+    UserDao user = new UserDao();
+    private int uId;
+    String[] value = new String[9];
+
     public UserAccount() {
         initComponents();
+        init();
     }
 
     /**
@@ -30,7 +38,6 @@ public class UserAccount extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
@@ -46,6 +53,7 @@ public class UserAccount extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -74,7 +82,6 @@ public class UserAccount extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 218, 293, -1));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 291, 293, -1));
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 357, 293, -1));
 
         jTextField6.setEditable(false);
@@ -149,6 +156,9 @@ public class UserAccount extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 0, 37, -1));
 
+        jPasswordField1.setText("jPasswordField1");
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 290, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -163,7 +173,22 @@ public class UserAccount extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    private void init() {
+        uId = user.getUserId(UserDashboard.userEmail.getText());
+        value = user.getUserValue(uId);
+        setValue();
+    }
 
+    private void setValue() {
+        jTextField1.setText(value[0]);
+        jTextField2.setText(value[1]);
+        jTextField3.setText(value[2]);
+        jPasswordField1.setText(value[3]);
+        jTextField5.setText(value[4]);
+        jTextField6.setText(value[5]);
+        jTextField7.setText(value[6]);
+        jTextField8.setText(value[7]);
+    }
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -232,10 +257,10 @@ public class UserAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;

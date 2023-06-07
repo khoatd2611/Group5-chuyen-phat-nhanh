@@ -276,6 +276,7 @@ private void init() {
                         UserDashboard ud = new UserDashboard();
                         ud.setVisible(true);
                         ud.pack();
+                        
                         UserDashboard.userEmail.setText(email);
                         this.dispose();
                     } else {
