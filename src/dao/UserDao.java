@@ -9,6 +9,9 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -112,6 +115,30 @@ public class UserDao {
 
     }
 
+    //delete user
+    public void delete(int id) {
+        int x = JOptionPane.showConfirmDialog(null, "Are you sure want to delete this account", "Delete Account", JOptionPane.OK_CANCEL_OPTION, 0);
+        if (x == JOptionPane.OK_OPTION) {
+            try {
+                ps = con.prepareStatement("delete from user where user_id = ?");
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                ps.setInt(1, id);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                if (ps.executeUpdate() > 0) {
+                    JOptionPane.showMessageDialog(null, "Account deleted");
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
     // get user value
     public String[] getUserValue(int id) {
         String[] value = new String[6];
@@ -153,4 +180,33 @@ public class UserDao {
         return id;
     }
 
+    // get user data
+    public void getUsersValue(JTable table, String search) {
+        String sql = "select * from user where concat(user_id, username, email, phone) like ? order by user_id desc";
+
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, "%" + search + "%");
+            rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel) table.getModel();
+            Object[] row;
+            while (rs.next()) {
+                row = new Object[8];
+                row[0] = rs.getInt(1);
+                row[1] = rs.getInt(2);
+                row[2] = rs.getInt(3);
+                row[3] = rs.getInt(4);
+                row[4] = rs.getInt(5);
+                row[5] = rs.getInt(6);
+                row[6] = rs.getInt(7);
+                row[7] = rs.getInt(8);
+                
+                model.addRow(row);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
 }
