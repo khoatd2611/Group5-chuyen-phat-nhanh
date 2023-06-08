@@ -1,6 +1,4 @@
-
 package admin;
-
 
 import java.awt.Color;
 import java.util.logging.Level;
@@ -15,7 +13,8 @@ public class Cancelledord extends javax.swing.JFrame {
 
     Color textPrimaryColor = new Color(102, 120, 138);
     Color primaryColor = new Color(42, 58, 73);
-    int xx,xy;
+    int xx, xy;
+
     public Cancelledord() {
         initComponents();
     }
@@ -278,7 +277,7 @@ public class Cancelledord extends javax.swing.JFrame {
         AdminDashboard.jLabel27.setForeground(textPrimaryColor);
         AdminDashboard.jLabel29.setVisible(true);
         AdminDashboard.jLabel28.setVisible(false);
-        
+
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -294,14 +293,14 @@ public class Cancelledord extends javax.swing.JFrame {
     }//GEN-LAST:event_formMouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-       
+
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        for(double i=0.1 ;i<1.0;i+=0.1){
-        String s=""+i;
-        float f= Float.parseFloat(s);
-        this.setOpacity(f);
+        for (double i = 0.1; i < 1.0; i += 0.1) {
+            String s = "" + i;
+            float f = Float.parseFloat(s);
+            this.setOpacity(f);
             try {
                 Thread.sleep(40);
             } catch (InterruptedException ex) {
@@ -313,12 +312,12 @@ public class Cancelledord extends javax.swing.JFrame {
     private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
-        this.setLocation(x - xx,y - xy);
+        this.setLocation(x - xx, y - xy);
     }//GEN-LAST:event_jPanel1MouseDragged
 
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
-        xx=evt.getX();
-        xy=evt.getY();
+        xx = evt.getX();
+        xy = evt.getY();
     }//GEN-LAST:event_jPanel1MousePressed
 
     /**

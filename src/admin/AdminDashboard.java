@@ -1,4 +1,3 @@
-
 package admin;
 
 import java.awt.Color;
@@ -19,7 +18,8 @@ public class AdminDashboard extends javax.swing.JFrame {
     Color selectionColor = new Color(34, 48, 62);
     Color sideColor = new Color(64, 194, 150);
     Color textSelectionColor = new Color(255, 255, 255);
-    int xx,xy;
+    int xx, xy;
+
     public AdminDashboard() {
         initComponents();
     }
@@ -481,7 +481,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel20jLabel4MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        
+
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
@@ -511,10 +511,10 @@ public class AdminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel17MouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        for(double i=0.1 ;i<1.0;i+=0.1){
-        String s=""+i;
-        float f= Float.parseFloat(s);
-        this.setOpacity(f);
+        for (double i = 0.1; i < 1.0; i += 0.1) {
+            String s = "" + i;
+            float f = Float.parseFloat(s);
+            this.setOpacity(f);
             try {
                 Thread.sleep(40);
             } catch (InterruptedException ex) {
@@ -524,20 +524,20 @@ public class AdminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jLabel19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseDragged
-         int x = evt.getXOnScreen();
+        int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
-        this.setLocation(x - xx,y - xy);
+        this.setLocation(x - xx, y - xy);
     }//GEN-LAST:event_jLabel19MouseDragged
 
     private void jLabel19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MousePressed
-         xx=evt.getX();
-        xy=evt.getY();
+        xx = evt.getX();
+        xy = evt.getY();
     }//GEN-LAST:event_jLabel19MousePressed
 
     private void jPanel16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel16MouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
-        this.setLocation(x - xx,y - xy);
+        this.setLocation(x - xx, y - xy);
     }//GEN-LAST:event_jPanel16MouseDragged
 
     /**
