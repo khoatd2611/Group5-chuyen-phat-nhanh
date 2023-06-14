@@ -1,5 +1,4 @@
 package admin;
-
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -322,6 +321,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel20.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 50));
 
         jLabel25.setText("jLabel2");
+        jLabel25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel25MouseClicked(evt);
+            }
+        });
         jPanel20.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jLabel26.setText("jLabel2");
@@ -547,6 +551,10 @@ public class AdminDashboard extends javax.swing.JFrame {
         int y = evt.getYOnScreen();
         this.setLocation(x - xx, y - xy);
     }//GEN-LAST:event_jPanel16MouseDragged
+
+    private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
+      
+    }//GEN-LAST:event_jLabel25MouseClicked
 
     /**
      * @param args the command line arguments
