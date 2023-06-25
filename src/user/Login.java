@@ -69,6 +69,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 0));
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel3MouseClicked(evt);
@@ -76,13 +77,13 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Segoe Print", 1, 36)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Login");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 130, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 153, 0));
-        jButton1.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -93,25 +94,25 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 240, 36));
         jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 382, -1));
-        jPanel3.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 382, -1));
+        jPanel3.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 382, -1));
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Email");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 72, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 72, -1));
 
-        jRadioButton1.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Employee");
         jRadioButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 98, -1));
 
-        jRadioButton2.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("User");
         jRadioButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -122,13 +123,13 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel3.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 72, -1));
 
-        jRadioButton3.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jRadioButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("Admin");
         jRadioButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 76, -1));
 
-        jLabel10.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Sign up");
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -139,13 +140,13 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 500, 152, -1));
 
-        jLabel11.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Don't have an account?");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 152, -1));
 
-        jLabel12.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Forgot password?");
         jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

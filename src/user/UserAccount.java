@@ -3,6 +3,8 @@ package user;
 
 import dao.UserDao;
 import java.awt.Color;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
@@ -19,7 +21,7 @@ public class UserAccount extends javax.swing.JFrame {
     Color primaryColor = new Color(42, 58, 73);
     UserDao user = new UserDao();
     private int uId;
-    String[] value = new String[9];
+    String[] value = new String[8];
 
     public UserAccount() {
         initComponents();
@@ -55,13 +57,17 @@ public class UserAccount extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextField1.setEditable(false);
@@ -109,7 +115,7 @@ public class UserAccount extends javax.swing.JFrame {
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 218, 293, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 153, 0));
-        jButton1.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Update");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +126,7 @@ public class UserAccount extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 335, 140, 44));
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
-        jButton2.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Delete");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -130,42 +136,42 @@ public class UserAccount extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 335, 140, 44));
 
-        jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Username");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 120, 91, -1));
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Email");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 186, 74, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("ID");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 54, 37, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Phone");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 325, 63, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Password");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 258, 83, -1));
 
-        jLabel6.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Sercurity Question");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, 147, -1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Answer");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 120, 85, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Address");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 186, 74, -1));
@@ -180,22 +186,6 @@ public class UserAccount extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 0, 37, -1));
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 290, -1));
-
-        jLabel10.setText("hide");
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
-
-        jLabel11.setText("hide");
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,19 +205,20 @@ public class UserAccount extends javax.swing.JFrame {
         
         uId = user.getUserId(UserDashboard.userEmail.getText());
         value = user.getUserValue(uId);
-        setValue();
+//        setValue();
     }
 
-    private void setValue() {
-        jTextField1.setText(value[0]);
-        jTextField2.setText(value[1]);
-        jTextField3.setText(value[2]);
-        jPasswordField1.setText(value[3]);
-        jTextField5.setText(value[4]);
-        jTextField6.setText(value[5]);
-        jTextField7.setText(value[6]);
-        jTextField8.setText(value[7]);
-    }
+//    private void setValue() {
+//        jTextField1.setText(value[0]);
+//        jTextField2.setText(value[1]);
+//        jTextField3.setText(value[2]);
+//        jPasswordField1.setText(value[3]);
+//        jTextField5.setText(value[4]);
+//        jTextField6.setText(value[5]);
+//        jTextField7.setText(value[6]);
+//        jTextField8.setText(value[7]);
+//        
+//   }
 
     public boolean isEmpty() {
         if (jTextField2.getText().isEmpty()) {
@@ -306,15 +297,12 @@ public class UserAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        setVisible(false);
-        setDefault();
+         setVisible(false);
+        UserDashboard.jPanel1.setBackground(primaryColor);
+        UserDashboard.jPanel3.setBackground(primaryColor);
+        UserDashboard.jLabel1.setForeground(textPrimaryColor);
+        
     }//GEN-LAST:event_jLabel14MouseClicked
-
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        jPasswordField1.setEchoChar('*');
-        jLabel10.setVisible(true);
-        jLabel11.setVisible(false);
-    }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
@@ -339,11 +327,18 @@ public class UserAccount extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTextField5KeyTyped
 
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        jPasswordField1.setEchoChar((char) 0);
-        jLabel1.setVisible(false);
-        jLabel4.setVisible(true);
-    }//GEN-LAST:event_jLabel11MouseClicked
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        for(double i=0.1 ;i<1.0;i+=0.1){
+        String s=""+i;
+        float f= Float.parseFloat(s);
+        this.setOpacity(f);
+            try {
+                Thread.sleep(40);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_formWindowOpened
 
     private boolean check() {
         String newEmail = jTextField3.getText();
@@ -373,8 +368,7 @@ public class UserAccount extends javax.swing.JFrame {
         UserDashboard.jPanel1.setBackground(primaryColor);
         UserDashboard.jPanel3.setBackground(primaryColor);
         UserDashboard.jPanel1.setForeground(textPrimaryColor);
-        UserDashboard.jLabel2.setVisible(true);
-        UserDashboard.jLabel15.setVisible(false);
+        
     }
 
     /**
@@ -417,8 +411,6 @@ public class UserAccount extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     public static javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

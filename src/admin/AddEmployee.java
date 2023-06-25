@@ -69,6 +69,7 @@ public class AddEmployee extends javax.swing.JFrame {
         });
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -94,23 +95,23 @@ public class AddEmployee extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("User ID");
 
-        jLabel3.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
 
-        jLabel4.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Username");
 
-        jLabel5.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Email");
 
-        jLabel6.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Phone");
 
@@ -120,7 +121,7 @@ public class AddEmployee extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Segoe Print", 1, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Address");
 
@@ -140,7 +141,7 @@ public class AddEmployee extends javax.swing.JFrame {
         });
 
         btnBack.setBackground(new java.awt.Color(255, 153, 0));
-        btnBack.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
+        btnBack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -155,7 +156,7 @@ public class AddEmployee extends javax.swing.JFrame {
         });
 
         btnSave.setBackground(new java.awt.Color(255, 153, 0));
-        btnSave.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
+        btnSave.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSave.setForeground(new java.awt.Color(255, 255, 255));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -327,8 +328,7 @@ public class AddEmployee extends javax.swing.JFrame {
         AdminDashboard.jPanel26.setBackground(primaryColor);
         AdminDashboard.jPanel27.setBackground(primaryColor);
         AdminDashboard.jLabel34.setForeground(textPrimaryColor);
-        AdminDashboard.jLabel35.setVisible(true);
-        AdminDashboard.jLabel36.setVisible(false);
+      
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

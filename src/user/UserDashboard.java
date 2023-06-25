@@ -26,22 +26,22 @@ public class UserDashboard extends javax.swing.JFrame {
          ImageIcon icon = new ImageIcon("src/icons/AzDeli.png");
         ImageIcon icon1 = new ImageIcon("src/icons/dashboard.png");
         ImageIcon icon2 = new ImageIcon("src/icons/logout.png");
-        ImageIcon icon3 = new ImageIcon("src/icons/delivery_dark.png");
+        
         ImageIcon icon4 = new ImageIcon("src/icons/delivery_light.png");
-        ImageIcon icon5 = new ImageIcon("src/icons/account_dark.png");
+        
         ImageIcon icon6 = new ImageIcon("src/icons/account_light.png");
-        ImageIcon icon7 = new ImageIcon("src/icons/product_dark.png");
+        
         ImageIcon icon8 = new ImageIcon("src/icons/product_light.png");
         
         jLabel19.setIcon(icon);
         jLabel17.setIcon(icon1);
         jLabel20.setIcon(icon2);
-        jLabel14.setIcon(icon3);
-        jLabel33.setIcon(icon4);
-        jLabel2.setIcon(icon5);
-        jLabel15.setIcon(icon6);
-        jLabel25.setIcon(icon7);
-        jLabel26.setIcon(icon8);
+        
+        jLabel14.setIcon(icon4);
+        
+        jLabel2.setIcon(icon6);
+        
+        jLabel25.setIcon(icon8);
         
     }
 
@@ -66,12 +66,10 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
@@ -81,7 +79,6 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -114,13 +111,13 @@ public class UserDashboard extends javax.swing.JFrame {
             }
         });
 
-        jLabel19.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel19.setText("AZ COURIER SERVICE");
 
-        userEmail.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        userEmail.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         userEmail.setText("user@gmail.com");
 
-        jLabel20.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel20.setText("Log out");
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -159,7 +156,7 @@ public class UserDashboard extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 153, 51));
 
-        jLabel17.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Dashboard");
 
@@ -185,7 +182,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(42, 58, 73));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 120, 138));
         jLabel1.setText("Acount");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,7 +208,6 @@ public class UserDashboard extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 50));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 270, 50));
 
@@ -224,7 +220,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel13.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(102, 120, 138));
         jLabel13.setText("Track Order");
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -250,7 +246,6 @@ public class UserDashboard extends javax.swing.JFrame {
 
         jPanel13.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 50));
         jPanel13.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
-        jPanel13.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jPanel5.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 270, 50));
 
@@ -285,7 +280,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jPanel20.setBackground(new java.awt.Color(42, 58, 73));
         jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel22.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(102, 120, 138));
         jLabel22.setText("New Delivery");
         jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -311,16 +306,15 @@ public class UserDashboard extends javax.swing.JFrame {
 
         jPanel20.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 50));
         jPanel20.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
-        jPanel20.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jPanel5.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 270, 50));
 
         jPanel15.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 270, 670));
 
-        jLabel23.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel23.setText("My Statistics");
 
-        jLabel24.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel24.setText("Total Categories :");
         jLabel24.setToolTipText("");
 
@@ -345,7 +339,7 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel23)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel24)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jPanel15.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 980, 170));
@@ -365,24 +359,14 @@ public class UserDashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 private void init(){
-        icons();
+      
     }
-    private void icons(){
-        jLabel14.setVisible(true);
-        jLabel33.setVisible(false);
-        jLabel25.setVisible(true);
-        jLabel26.setVisible(false);
-        jLabel2.setVisible(true);
-        jLabel15.setVisible(false);
-        
-        
-    }
+   
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
                 jPanel13.setBackground(selectionColor);
                jPanel17.setBackground(sideColor);
                jLabel13.setForeground(textSelectionColor);
-               jLabel14.setVisible(true);
-               jLabel33.setVisible(false);
+           
                TrackOrder trackOrder = new TrackOrder();
                trackOrder.setVisible(true);
                trackOrder.pack();
@@ -396,9 +380,8 @@ private void init(){
         jPanel20.setBackground(selectionColor);
         jPanel21.setBackground(sideColor);
         jLabel22.setForeground(textSelectionColor);
-        jLabel25.setVisible(true);
-        jLabel26.setVisible(false);
-        Order order = new Order();
+        
+        Order1 order = new Order1();
         order.setVisible(true);
         order.pack();
     }//GEN-LAST:event_jLabel22MouseClicked
@@ -443,8 +426,7 @@ private void init(){
         jPanel1.setBackground(selectionColor);
         jPanel3.setBackground(sideColor);
         jLabel1.setForeground(textSelectionColor);
-        jLabel2.setVisible(true);
-        jLabel15.setVisible(false);
+        ;
         UserAccount userAcc = new UserAccount();
         userAcc.setVisible(true);
         userAcc.pack();
@@ -489,7 +471,6 @@ private void init(){
     public static javax.swing.JLabel jLabel1;
     public static javax.swing.JLabel jLabel13;
     public static javax.swing.JLabel jLabel14;
-    public static javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -501,8 +482,6 @@ private void init(){
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     public static javax.swing.JLabel jLabel25;
-    public static javax.swing.JLabel jLabel26;
-    public static javax.swing.JLabel jLabel33;
     public static javax.swing.JPanel jPanel1;
     public static javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;

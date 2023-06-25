@@ -270,11 +270,11 @@ public class TakeMoreOdr extends javax.swing.JFrame {
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         setVisible(false);
-        EmployeeDashboard.jPanel24.setBackground(primaryColor);
-        EmployeeDashboard.jPanel25.setBackground(primaryColor);
-        EmployeeDashboard.jLabel30.setForeground(textPrimaryColor);
-        EmployeeDashboard.jLabel31.setVisible(true);
-        EmployeeDashboard.jLabel32.setVisible(false);
+//        EmployeeDashboard.jPanel24.setBackground(primaryColor);
+//        EmployeeDashboard.jPanel25.setBackground(primaryColor);
+//        EmployeeDashboard.jLabel30.setForeground(textPrimaryColor);
+//        EmployeeDashboard.jLabel31.setVisible(true);
+//        EmployeeDashboard.jLabel32.setVisible(false);
 
     }//GEN-LAST:event_jLabel14MouseClicked
 

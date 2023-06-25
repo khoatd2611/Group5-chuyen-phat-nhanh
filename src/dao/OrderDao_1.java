@@ -6,15 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import java.sql.Timestamp;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author tuan1
  */
-public class OrderDao {
+public class OrderDao_1 {
 
     Connection con = MyConnection.getConnetion();
     PreparedStatement ps;
@@ -23,7 +21,7 @@ public class OrderDao {
 
     // Tạo order mới
     public void createOrder(int userId, int packageId, Timestamp pickupTime, String customerName, String customerAddress, String customerPhone) {
-        String sql = "INSERT INTO orders ( user_id, package_id, pickup_time, customer_name, customer_address, customer_phone) VALUES ( ?, ?, ?, ?, ?,?)";
+        String sql = "INSERT INTO orders ( user_id, package_id, pickup_time, customer_name, customer_address, customer_phone) VALUES ( ?, ?, ?, ?, ?, ?)";
         try {
             ps = con.prepareStatement(sql);
 
@@ -33,12 +31,9 @@ public class OrderDao {
             ps.setString(4, customerName);
             ps.setString(5, customerAddress);
             ps.setString(6, customerPhone);
-//            ps.setString(7, cprovince);
-//            ps.setString(8, uAdd);
-//            ps.setString(9, uprovince);
-            
+
             if (ps.executeUpdate() > 0) {
-                JOptionPane.showMessageDialog(null, "Order create successfully  ");
+                System.out.println("New order added successfully.");
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -118,20 +113,20 @@ public class OrderDao {
 
     // Hàm main để kiểm tra
     public static void main(String[] args) {
-//        OrderDao orderDao = new OrderDao();
-//
-//        // Test tạo order mới
-//        int orderId = 2;
-//        int userId = 1;
-//        int packageId = 1;
-//        Timestamp pickupTime = Timestamp.valueOf("2023-06-21 10:00:00");
-//        String customerName = "John Doe";
-//        String customerAddress = "123 Street";
-//        String customerPhone = "123456789";
-//        orderDao.createOrder(userId, packageId, pickupTime, customerName, customerAddress, customerPhone);
-//
-//        // Test đọc thông tin order
-//        orderDao.readOrder(orderId);
+        OrderDao_1 orderDao = new OrderDao_1();
+
+        // Test tạo order mới
+        int orderId = 2;
+        int userId = 1;
+        int packageId = 1;
+        Timestamp pickupTime = Timestamp.valueOf("2023-06-21 10:00:00");
+        String customerName = "John Doe";
+        String customerAddress = "123 Street";
+        String customerPhone = "123456789";
+        orderDao.createOrder(userId, packageId, pickupTime, customerName, customerAddress, customerPhone);
+
+        // Test đọc thông tin order
+        orderDao.readOrder(orderId);
 
 //        // Test cập nhật thông tin order
 //        userId = "user456";
