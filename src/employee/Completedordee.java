@@ -246,8 +246,7 @@ public class Completedordee extends javax.swing.JFrame {
         EmployeeDashboard.jPanel20.setBackground(primaryColor);
         EmployeeDashboard.jPanel21.setBackground(primaryColor);
         EmployeeDashboard.jLabel22.setForeground(textPrimaryColor);
-        EmployeeDashboard.jLabel25.setVisible(true);
-        EmployeeDashboard.jLabel26.setVisible(false);
+        
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

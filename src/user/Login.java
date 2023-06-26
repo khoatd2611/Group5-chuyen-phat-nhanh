@@ -287,7 +287,7 @@ private void init() {
                     ps.setString(2, password);
                     ResultSet rs = ps.executeQuery();
                     if (rs.next()) {
-                        localStorage.saveEmployeeId(employee.getUserId(email));
+                        localStorage.saveEmployeeId(employee.getEmployeeId(email));
                         EmployeeDashboard ed = new EmployeeDashboard();
                         ed.setVisible(true);
                         ed.pack();

@@ -245,11 +245,10 @@ public class TrackOrder extends javax.swing.JFrame {
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         setVisible(false);
-        AdminDashboard.jPanel13.setBackground(primaryColor);
-        AdminDashboard.jPanel17.setBackground(primaryColor);
-        AdminDashboard.jLabel13.setForeground(textPrimaryColor);
-        AdminDashboard.jLabel14.setVisible(true);
-        AdminDashboard.jLabel33.setVisible(false);
+        UserDashboard.jPanel13.setBackground(primaryColor);
+        UserDashboard.jPanel17.setBackground(primaryColor);
+        UserDashboard.jLabel13.setForeground(textPrimaryColor);
+        
     }//GEN-LAST:event_jLabel14MouseClicked
 
     /**

@@ -1,10 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package admin.PackageType;
 
+
 import dao.PackageTypeDao;
+import employee.EmployeeDashboard;
 import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,13 +20,14 @@ public class PackageTypeView extends javax.swing.JFrame {
 
     Color notEdit = new Color(204, 204, 204);
     int rowIndex;
-
+     Color textPrimaryColor = new Color(102,120,138);
+    Color primaryColor = new Color(42,58,73);
     public PackageTypeView() {
         initComponents();
         jPanel1.setBackground(notEdit);
         jTable1.getColumnModel().getColumn(0).setPreferredWidth(75);
         jTable1.getColumnModel().getColumn(1).setPreferredWidth(75);
-        DefaultTableModel packageTypeTableModel = (DefaultTableModel) jTable1.getModel();
+        
 
         packageType.readAllPackageTypes(jTable1);
     }
@@ -62,6 +62,7 @@ public class PackageTypeView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 jPanel1MouseDragged(evt);
@@ -189,14 +190,14 @@ public class PackageTypeView extends javax.swing.JFrame {
         jPanel1.add(btnClear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, 160, 44));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("X");
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel17MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, -1, -1));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 40, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -259,7 +260,10 @@ public class PackageTypeView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClear1ActionPerformed
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-        this.dispose();
+         setVisible(false);
+        EmployeeDashboard.jPanel26.setBackground(primaryColor);
+        EmployeeDashboard.jPanel27.setBackground(primaryColor);
+        EmployeeDashboard.jLabel32.setForeground(textPrimaryColor);
     }//GEN-LAST:event_jLabel17MouseClicked
 
     /**
@@ -305,9 +309,6 @@ public class PackageTypeView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

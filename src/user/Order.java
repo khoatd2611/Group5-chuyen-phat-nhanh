@@ -555,7 +555,10 @@ public class Order extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-        this.dispose();
+         setVisible(false);
+        UserDashboard.jPanel20.setBackground(primaryColor);
+        UserDashboard.jPanel21.setBackground(primaryColor);
+        UserDashboard.jLabel22.setForeground(textPrimaryColor);
     }//GEN-LAST:event_jLabel19MouseClicked
 
     /**

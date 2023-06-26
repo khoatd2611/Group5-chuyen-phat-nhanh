@@ -235,12 +235,11 @@ public class Completedord extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        setVisible(false);
-        AdminDashboard.jPanel24.setBackground(primaryColor);
-        AdminDashboard.jPanel25.setBackground(primaryColor);
-        AdminDashboard.jLabel30.setForeground(textPrimaryColor);
-        AdminDashboard.jLabel31.setVisible(true);
-        AdminDashboard.jLabel32.setVisible(false);
+//        setVisible(false);
+//        AdminDashboard.jPanel24.setBackground(primaryColor);
+//        AdminDashboard.jPanel25.setBackground(primaryColor);
+//        AdminDashboard.jLabel30.setForeground(textPrimaryColor);
+        
         
     }//GEN-LAST:event_jLabel14MouseClicked
 

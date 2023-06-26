@@ -17,7 +17,8 @@ public class ManageUsers extends javax.swing.JFrame {
     UserDao user = new UserDao();
     DefaultTableModel model;
     int rowIndex;
-
+ Color textPrimaryColor = new Color(102,120,138);
+    Color primaryColor = new Color(42,58,73);
     public ManageUsers() {
         initComponents();
         usersTable();
@@ -319,7 +320,10 @@ public class ManageUsers extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        this.dispose();
+         setVisible(false);
+        AdminDashboard.jPanel28.setBackground(primaryColor);
+        AdminDashboard.jPanel29.setBackground(primaryColor);
+        AdminDashboard.jLabel37.setForeground(textPrimaryColor);
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked

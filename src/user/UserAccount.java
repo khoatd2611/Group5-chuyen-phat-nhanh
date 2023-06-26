@@ -371,8 +371,7 @@ public class UserAccount extends javax.swing.JFrame {
         UserDashboard.jPanel1.setBackground(primaryColor);
         UserDashboard.jPanel3.setBackground(primaryColor);
         UserDashboard.jPanel1.setForeground(textPrimaryColor);
-        UserDashboard.jLabel2.setVisible(true);
-        UserDashboard.jLabel15.setVisible(false);
+        
     }
 
     /**
