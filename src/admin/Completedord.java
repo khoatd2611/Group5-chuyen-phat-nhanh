@@ -239,8 +239,10 @@ public class Completedord extends javax.swing.JFrame {
 //        AdminDashboard.jPanel24.setBackground(primaryColor);
 //        AdminDashboard.jPanel25.setBackground(primaryColor);
 //        AdminDashboard.jLabel30.setForeground(textPrimaryColor);
-        
-        
+//        AdminDashboard.jLabel31.setVisible(true);
+//        AdminDashboard.jLabel32.setVisible(false);
+//        
+
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

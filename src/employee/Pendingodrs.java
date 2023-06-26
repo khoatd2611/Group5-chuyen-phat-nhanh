@@ -236,11 +236,11 @@ public class Pendingodrs extends javax.swing.JFrame {
     int xx,xy;
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         setVisible(false);
+//        
+//        EmployeeDashboard.jPanel22.setBackground(primaryColor);
+//        EmployeeDashboard.jPanel23.setBackground(primaryColor);
+//        EmployeeDashboard.jLabel27.setForeground(textPrimaryColor);
         
-        EmployeeDashboard.jPanel22.setBackground(primaryColor);
-        EmployeeDashboard.jPanel23.setBackground(primaryColor);
-        EmployeeDashboard.jLabel27.setForeground(textPrimaryColor);
-      
         
     }//GEN-LAST:event_jLabel14MouseClicked
 
