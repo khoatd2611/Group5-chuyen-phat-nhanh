@@ -17,7 +17,9 @@ public class ManageUsers extends javax.swing.JFrame {
     UserDao user = new UserDao();
     DefaultTableModel model;
     int rowIndex;
+
      Color textPrimaryColor = new Color(102,120,138);
+
     Color primaryColor = new Color(42,58,73);
     public ManageUsers() {
         initComponents();

@@ -37,6 +37,16 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         ImageIcon icon4 = new ImageIcon("src/icons/delivery_light.png");
         
         ImageIcon icon6 = new ImageIcon("src/icons/account_light.png");
+        ImageIcon icon7 = new ImageIcon("src/icons/complete.png");
+        ImageIcon icon8 = new ImageIcon("src/icons/product_light.png");
+        
+        ImageIcon icon10 = new ImageIcon("src/icons/box_light.png");
+        ImageIcon icon11 = new ImageIcon("src/icons/transaction_light.png");
+        ImageIcon icon12 = new ImageIcon("src/icons/category_light.png");
+        
+        jLabel34.setIcon(icon12);
+        jLabel36.setIcon(icon10);
+        jLabel31.setIcon(icon11);
         
         ImageIcon icon8 = new ImageIcon("src/icons/product_light.png");
         
@@ -47,9 +57,6 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jLabel34.setIcon(icon8);
         jLabel36.setIcon(icon10);
         jLabel31.setIcon(icon11);
-        
-        
-        
         jLabel19.setIcon(icon);
         jLabel17.setIcon(icon1);
         jLabel20.setIcon(icon2);
@@ -220,7 +227,7 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 50));
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 270, 50));
+        jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 270, 50));
 
         jPanel13.setBackground(new java.awt.Color(42, 58, 73));
         jPanel13.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -326,7 +333,6 @@ public class EmployeeDashboard extends javax.swing.JFrame {
 
         jPanel28.setBackground(new java.awt.Color(42, 58, 73));
         jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(102, 120, 138));
         jLabel35.setText("Storage");
@@ -350,7 +356,6 @@ public class EmployeeDashboard extends javax.swing.JFrame {
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-
         jPanel28.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 50));
         jPanel28.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
@@ -429,7 +434,6 @@ public class EmployeeDashboard extends javax.swing.JFrame {
     private void jPanel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MouseClicked
 
     }//GEN-LAST:event_jPanel13MouseClicked
-
     private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
 
         jPanel24.setBackground(selectionColor);
