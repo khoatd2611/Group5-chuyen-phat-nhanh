@@ -271,9 +271,7 @@ public class TakeMoreOdr extends javax.swing.JFrame {
         EmployeeDashboard.jPanel24.setBackground(primaryColor);
         EmployeeDashboard.jPanel25.setBackground(primaryColor);
         EmployeeDashboard.jLabel30.setForeground(textPrimaryColor);
-        EmployeeDashboard.jLabel31.setVisible(true);
-        EmployeeDashboard.jLabel32.setVisible(false);
-
+        
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

@@ -331,7 +331,6 @@ public class AddEmployee extends javax.swing.JFrame {
         AdminDashboard.jPanel26.setBackground(primaryColor);
         AdminDashboard.jPanel27.setBackground(primaryColor);
         AdminDashboard.jLabel34.setForeground(textPrimaryColor);
-        
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
