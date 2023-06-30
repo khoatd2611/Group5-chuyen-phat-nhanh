@@ -1,6 +1,6 @@
 package admin;
 
-
+import Controller.AdminDashboardController;
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,35 +21,39 @@ public class AdminDashboard extends javax.swing.JFrame {
     Color sideColor = new Color(64, 194, 150);
     Color textSelectionColor = new Color(255, 255, 255);
     int xx, xy;
+
+    AdminDashboardController adminDashboard = new AdminDashboardController();
     
     public AdminDashboard() {
         initComponents();
         ImageIcon icon = new ImageIcon("src/icons/AzDeli.png");
         ImageIcon icon1 = new ImageIcon("src/icons/dashboard.png");
         ImageIcon icon2 = new ImageIcon("src/icons/logout.png");
-        
+
         ImageIcon icon4 = new ImageIcon("src/icons/delivery_light.png");
         ImageIcon icon6 = new ImageIcon("src/icons/edit_supplier_light.png");
-       ImageIcon icon7 = new ImageIcon("src/icons/delivery_light.png");
-       ImageIcon icon8 = new ImageIcon("src/icons/managee.png");
-       ImageIcon icon9 = new ImageIcon("src/icons/manageu.png");
-       
-      
+        ImageIcon icon7 = new ImageIcon("src/icons/delivery_light.png");
+        ImageIcon icon8 = new ImageIcon("src/icons/managee.png");
+        ImageIcon icon9 = new ImageIcon("src/icons/manageu.png");
+
         ImageIcon icon12 = new ImageIcon("src/icons/account_light.png");
-       
+
         jLabel2.setIcon(icon12);
-        
-        
+
         jLabel38.setIcon(icon9);
         jLabel25.setIcon(icon8);
-        
+
         jLabel35.setIcon(icon6);
         jLabel19.setIcon(icon7);
         jLabel19.setIcon(icon);
         jLabel17.setIcon(icon1);
         jLabel20.setIcon(icon2);
         jLabel14.setIcon(icon4);
-        
+        adminDashboard.fetchData(jLabel3, "orders");
+        adminDashboard.fetchData(jLabel4, "users");
+        adminDashboard.fetchData(jLabel5, "employees");
+        adminDashboard.fetchData(jLabel6, "completedOrders");
+
     }
 
     /**
@@ -97,6 +101,16 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -398,9 +412,42 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel23.setText("My Statistics");
 
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel24.setText("Total Categories :");
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel24.setText("Total Order :");
         jLabel24.setToolTipText("");
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel26.setText("Total Users :");
+        jLabel26.setToolTipText("");
+
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel27.setText("Total Employees :");
+        jLabel27.setToolTipText("");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setText("none");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setText("none");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel5.setText("none");
+
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel28.setText("Completed Order :");
+        jLabel28.setToolTipText("");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel6.setText("none");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel7.setText("orders");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel8.setText("users");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel9.setText("employees");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -413,8 +460,29 @@ public class AdminDashboard extends javax.swing.JFrame {
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(410, Short.MAX_VALUE))
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel27))
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel9))
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel8))
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel7)
+                                .addGap(151, 151, 151)
+                                .addComponent(jLabel28)
+                                .addGap(70, 70, 70)
+                                .addComponent(jLabel6)))))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -422,11 +490,26 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel23)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel24)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel8))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel9))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
-        jPanel15.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 980, 170));
+        jPanel15.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 980, 310));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -444,11 +527,11 @@ public class AdminDashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        
+
         jPanel13.setBackground(selectionColor);
         jPanel17.setBackground(sideColor);
         jLabel13.setForeground(textSelectionColor);
-        
+
         TrackOdrAdmin track = new TrackOdrAdmin();
         track.setVisible(true);
         track.pack();
@@ -462,7 +545,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel20.setBackground(selectionColor);
         jPanel21.setBackground(sideColor);
         jLabel22.setForeground(textSelectionColor);
-        
+
         ManageEmployees employees = new ManageEmployees();
         employees.setVisible(true);
         employees.pack();
@@ -480,7 +563,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel1.setBackground(selectionColor);
         jPanel3.setBackground(sideColor);
         jLabel1.setForeground(textSelectionColor);
-        
+
         AdAccount adacc = new AdAccount();
         adacc.setVisible(true);
         adacc.pack();
@@ -524,7 +607,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel26.setBackground(selectionColor);
         jPanel27.setBackground(sideColor);
         jLabel34.setForeground(textSelectionColor);
-        
+
         AddEmployee adde = new AddEmployee();
         adde.setVisible(true);
         adde.pack();
@@ -591,10 +674,20 @@ public class AdminDashboard extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel23;
     public static javax.swing.JLabel jLabel24;
     public static javax.swing.JLabel jLabel25;
+    public static javax.swing.JLabel jLabel26;
+    public static javax.swing.JLabel jLabel27;
+    public static javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel34;
     public static javax.swing.JLabel jLabel35;
     public static javax.swing.JLabel jLabel37;
     public static javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     public static javax.swing.JPanel jPanel1;
     public static javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
